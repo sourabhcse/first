@@ -15,7 +15,7 @@ console.log(header);
 header.textContent='shiva'
 //header.innerHTML='<h1>Dolli</h1>'
 header.style.borderBottom='solid 5px red'
-/*var items=document.getElementsByClassName('list-group-item');
+var items=document.getElementsByClassName('list-group-item');
 console.log(items);
 console.log(items[1]);
 items[1].textContent='Raj';
@@ -27,7 +27,7 @@ items[2].style.backgroundColor='green';*/
 
 //editing by tag name
 
-var li=document.getElementsByClassName('li');
+var li=document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
 li[1].textContent='Raj';
