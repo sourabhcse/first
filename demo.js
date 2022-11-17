@@ -23,18 +23,34 @@ items[0].style.fontWeight='bold';
 items[1].style.fontWeight='bold';
 items[2].style.fontWeight='bold';
 items[3].style.fontWeight='bold';
-items[2].style.backgroundColor='green';*/
+items[2].style.backgroundColor='green';
 
 //editing by tag name
 
-var li=document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[1].textContent='Raj';
-li[0].style.fontWeight='bold';
-li[1].style.fontWeight='bold';
-li[2].style.fontWeight='bold';
-li[3].style.fontWeight='bold';
-li[2].style.backgroundColor='green';
+//var li=document.getElementsByTagName('li');
+//console.log(li);
+//console.log(li[1]);
+//li[1].textContent='Raj';
+//li[0].style.fontWeight='bold';
+//li[1].style.fontWeight='bold';
+//li[2].style.fontWeight='bold';
+//li[3].style.fontWeight='bold';
+//li[2].style.backgroundColor='green';
+
+var sed=document.querySelector('.list-group-item:nth-child(2)');
+sed.style.backgroundColor = 'green';
+
+var td=document.querySelector('.list-group-item:nth-child(3)');
+td.style.display = 'none';
+
+var items=document.querySelectorAll('.list-group-item');
+items[1].style.color='blue';
+
+var odd=document.querySelectorAll('li:nth-child(odd)');
+for (var i=0; i<odd.length;i++)
+{
+    odd[i].style.backgroundColor='red';
+}
+
 
 
