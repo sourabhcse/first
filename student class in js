@@ -1,0 +1,30 @@
+function student(name, age, phonenumber, boardmk)
+   {
+     
+     this.name = name;
+     this.age = age;
+     this.phonenumber = phonenumber;
+     this.boardmk=boardmk;
+     student.counter+=1;
+   }
+   
+var counter=0;  
+std1 = new student("hh",23, 10 ,23);
+std2 = new student("jwj",55, 155 ,75);
+std3 = new student("mmd",50, 155 ,55);
+std4 = new student("hh",75, 155 ,25);
+std5 = new student("dfjnfk",25, 155 ,26);
+
+console.log(std1.age);
+console.log(student.counter);
+
+function tocheck(){
+  if(this.boardmk>40){
+    console.log("eligible");
+  }else
+  {
+    console.log("not eligible");
+  }
+}
+
+tocheck(std1.boardmk);
