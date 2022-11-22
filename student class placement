@@ -1,0 +1,26 @@
+class Student{
+    constructor(name,age,marks){
+        this.name=name;
+        this.age=age;
+        this.marks=marks;
+    }
+    setplaage(minage){
+       // console.log(this);
+        return(minMarks)=>{
+            if(this.marks>minMarks && this.age>minage){
+                console.log(this.name + " is ready for placement");
+            }else{
+                console.log(this.name + " is not ready for placement");          
+              }
+            
+        }
+    }
+}
+
+const saini=new Student('saini',22,44);
+const raj=new Student('raj',78,54);
+const aman=new Student('aman',22,84);
+const nn=new Student('mm',74,54);
+const op=new Student('op',70,44);
+
+saini.setplaage(18)(40);
