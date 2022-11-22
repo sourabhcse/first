@@ -1,0 +1,14 @@
+//Create a new object called Student with age 20 , write a function which prints the age of the student from the student object.
+//Dont pass in args. Read from 'this' and use BIND
+
+student={
+  age:20
+}
+
+function printage(){
+  
+  return this.age;
+}
+  
+var bound=printage.bind(student);
+console.log(bound());
