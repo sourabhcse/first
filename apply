@@ -1,0 +1,14 @@
+//2-Apply:
+
+obj1={
+  num1:2
+}
+
+function add(a,b,c){
+   return this.num1 + a +b+c;
+}
+
+arr=[1,2,3]
+console.log(add.apply(obj1,arr));
+
+
