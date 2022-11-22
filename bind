@@ -1,0 +1,15 @@
+
+
+//3-bind
+obj1={
+  num1:2
+}
+
+function add(a,b,c){
+   return this.num1 + a +b+c;
+}
+
+arr=[1,2,3]
+
+var bound=add.bind(obj1);
+console.log(bound(1,2,3));
