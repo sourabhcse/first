@@ -1,0 +1,14 @@
+//1-call
+obj1={
+  num1:2
+}
+
+function add(a){
+   return this.num1 + a;
+}
+
+console.log(add.call(obj1,15));
+
+
+
+
