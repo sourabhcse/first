@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Expense Tracker App</title>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
-        rel="stylesheet">
+    <title>
+        Expense Tracker
+    </title>
+  
     
 </head>
+
 <body>
-    <header>
-        <h1 class="title">Expense Tracker App</h1>
-    <header>
+    <h1>Expenser Tracker App</h1>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>EMP Code</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP Code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-    <section class="content">
-        <h3 class="secondTitle">Add a new item: </h3>
-        <div class="form">
-            <form id="expForm">
-                <div class="formLine left">
-                    <span for="type">Choose Expense category:</span>
-                    <select id="type">
-                        <option value="chooseOne">select one</option>
-                        <option value="Movie">Movie</option>
-                        <option value="Fuel">Fuel</option>
-                        <option value="Rent">Rent</option>
-                        <option value="Other">other</option>
-                    </select>
-                </div>
-                <div class="formLine right">
-                    <span for="name">Choose discription:</span>
-                    <input type="text" id="name">
-                </div>
-
-                
-                <div class="formLine right">
-                    <span for="amount">Choose Expense Amount:</span>
-                    <input type="text" id="amount">
-                </div>
-                <button type="submit" class="buttonSave">Add expense</button>
-            </form>
-        </div>
-    </section>
-    <section class="content">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>category</th>
-                    <th>description</th>
-                    
-                    <th>Amount</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
-            <tbody id="expenseTable">
-
-            </tbody>
-        </table>
-    </section>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
     <script src="proj.js"></script>
 </body>
+
 </html>
