@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator!</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="util.css" rel="stylesheet" type="text/css" />
+    
+    <title>Contact Form</title>
 </head>
-<body>
-    <h1 class ="text-center">Calculator made By Sourabh Saini</h1>
-    <div class="container  mx mx-auto">
-        <div class="row">
-            <input class="input" type="text"/>
-        </div>
-        <div class="row">
-            <button class="button">C</button>
-            <button class="button">%</button>
-            <button class="button">m</button>
-            <button class="button">m</button>
-        </div>
-        <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button">*</button>
-        </div>
-        <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">/</button>
-        </div>
-        <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button">+</button>
-        </div>
-        <div class="row">
-            <button class="button">0</button>
-            <button class="button">.</button>
-            <button class="button">=</button>
-            <button class="button">-</button>
-        </div>
 
-    </div>
-    <script src="script.js"></script>
+<body>
+
+    <form id="form">
+        <h1>Contact</h1>
+        <div>
+            <label for="name">Name</label> <br>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="email">Email</label> <br>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="message">Message</label> <br>
+            <textarea name="message" id="message"></textarea>
+        </div>
+        <div id="button-row">
+            <div class="button">
+                <button type="submit" id="send">Send</button>
+            </div>
+            <div class="button">
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.2.0/axios.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
