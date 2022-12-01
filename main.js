@@ -49,6 +49,12 @@ sendBtn.addEventListener('click', (e) => {
             console.log(err);
         })
 
+    axios.delete("https://crudcrud.com/api/dfa0e737bdba4d6299ef9bcf7d56eca6/appoint")
+            .then((response) => {console.log(response)})
+            .catch((err)=>{
+                console.log(err);
+            })
+
     window.addEventListener("DOMContentLoaded",()=>{
         axios.get("https://crudcrud.com/api/dfa0e737bdba4d6299ef9bcf7d56eca6/appoint")
         .then((response)=>{
