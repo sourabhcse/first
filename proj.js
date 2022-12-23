@@ -9,6 +9,32 @@ function onFormSubmit() {
             updateRecord(formData);
         resetForm();
     }
+
+
+    axios.post("https://crudcrud.com/api/3eb32fa65df943088a3be85d25c4aad8/expense", formData)
+        .then((Response) => { console.log(Response) })
+        .catch((err) => {
+            console.log(err);
+        })
+
+    axios.delete("https://crudcrud.com/api/3eb32fa65df943088a3be85d25c4aad8/expense")
+    .then((response) => { console.log(response) })
+    .catch((err) => {
+        console.log(err);
+    })
+
+    window.addEventListener("DOMContentLoaded", () => {
+        axios.get("https://crudcrud.com/api/3eb32fa65df943088a3be85d25c4aad8/expense")
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    })
+
+
+
 }
 
 function readFormData() {
@@ -18,6 +44,7 @@ function readFormData() {
     formData["salary"] = document.getElementById("salary").value;
     formData["city"] = document.getElementById("city").value;
     return formData;
+
 }
 
 function insertNewRecord(data) {
@@ -65,6 +92,9 @@ function onDelete(td) {
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
     }
+
+
+
 }
 
 function validate() {
@@ -79,4 +109,12 @@ function validate() {
     }
     return isValid;
 }
+
+
+
+
+
+
+
+
 
