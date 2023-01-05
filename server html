@@ -1,0 +1,10 @@
+const http = require("http");
+
+const server=http.createServer((req,res)=>{
+    console.log(req.url,req.method,req.headers);
+    res.setHeader('Content-Type','text/html');
+    res.write('<html><body><h1>welcome to my Node.js project</h1></body></html>');
+    res.end();
+});
+
+server.listen(4000);
