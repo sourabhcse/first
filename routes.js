@@ -6,9 +6,9 @@ const requestHandler=(req,res)=>{
 
 if (url === '/') {
     fs.readFile('./message.text', { encoding: "utf-8" }, (err, message) => {
-        if(err){
+        /*if(err){
             console.log(err);
-        }
+        }*/
         
         //console.log('data from file' , + message);
         res.write('<html>');
