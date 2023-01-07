@@ -9,25 +9,23 @@ const bodyParser=require('body-parser');
 
 const app=express();
 
+const adminRoutes=require('./routes/admin.js');
+
+const shopRoutes =require('./routes/shop.js')
+
 app.use(bodyParser.urlencoded({extended:false}));
 
+// "/admin is ignored in the path"
+app.use('/admin',adminRoutes);
 
-app.use('/add-product',(req,res,next)=>{
-    console.log("in the middleware");
-    res.send('<form action ="/product" method="POST"><input type="text" name="title"><input type="text" name="size"><button type="submit">Add product</button>');
+app.use('/admin',shopRoutes);
 
-});
-
-app.post('/product',(req,res,next)=>{
-    console.log(req.body);
-    res.redirect('/');
+app.use((req,res,next)=>{
+    res.status(404).send('<h1>Page not Found</h1>');
 });
 
 
-app.use('/',(req,res,next)=>{
-    console.log("in the another middleware");
-    res.send(`<h1>Hello From Express</h1>`);
-});
+
 //const server = http.createServer(app);
 
 app.listen(3000);
